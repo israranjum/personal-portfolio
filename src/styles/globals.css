@@ -27,3 +27,12 @@
     @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white;
   }
 }
+
+@layer utilities {
+  .developer-name {
+    @apply relative text-slate-300;
+  }
+  .developer-name::after {
+    @apply content-['Israr'] absolute text-[#5651e5] border-r-2 border-[#5651e5] top-2 left-0 h-[90%] w-0 overflow-hidden text-center animate-animate;
+  }
+}

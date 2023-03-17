@@ -5,6 +5,7 @@ import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { useState } from "react";
+import Image from "next/image";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -15,8 +16,8 @@ const Navbar = () => {
   return (
     <div className="fixed w-full h-20 shadow-xl z-[100]">
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        {/* <Image src="" width="125" height="50" alt="/"/> */}
-        <h2>Logo Here</h2>
+        <Image src="./i.svg" width="150" height="50" alt="/" className="pt-7" />
+        {/* <h2>Logo Here</h2> */}
         {/* Header Menu Start here */}
         <div>
           <ul className="hidden md:flex">
@@ -59,9 +60,9 @@ const Navbar = () => {
           }
         >
           <div>
-            <div className="flex w-full items-center justify-between">
-              <h2>Logo Here</h2>
-              {/* <Image src="/" alt="Logo Image" width="87" height="35"/> */}
+            <div className="flex w-full items-center justify-between overflow-hidden">
+              {/* <h2>Logo Here</h2> */}
+              <Image src="./i.svg" alt="Logo Image" width="87" height="35" />
               <div
                 onClick={handleNav}
                 className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
