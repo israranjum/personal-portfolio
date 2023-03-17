@@ -1,5 +1,4 @@
 import React from "react";
-// import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
@@ -15,8 +14,16 @@ const Navbar = () => {
   };
   return (
     <div className="fixed w-full h-20 shadow-xl z-[100]">
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Image src="./i.svg" width="150" height="50" alt="/" className="pt-7" />
+      <div className=" flex justify-between items-center w-full h-full px-2 2xl:px-16 bg-[#ecf0f3]">
+        <Link href="/">
+          <Image
+            src="./i.svg"
+            width="150"
+            height="50"
+            alt="/"
+            className="pt-7"
+          />
+        </Link>
         {/* <h2>Logo Here</h2> */}
         {/* Header Menu Start here */}
         <div>
@@ -24,18 +31,18 @@ const Navbar = () => {
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
             </Link>
-            <Link href="/">
+            <Link href="/About">
               <li className="ml-10 text-sm uppercase hover:border-b">About</li>
             </Link>
-            <Link href="/">
+            <Link href="/Skills">
               <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
             </Link>
-            <Link href="/">
+            <Link href="/Projects">
               <li className="ml-10 text-sm uppercase hover:border-b">
                 Projects
               </li>
             </Link>
-            <Link href="/">
+            <Link href="/Contact">
               <li className="ml-10 text-sm uppercase hover:border-b">
                 Contact
               </li>
@@ -82,16 +89,16 @@ const Navbar = () => {
               <Link href="/">
                 <li className="py-4 text-sm uppercase">Home</li>
               </Link>
-              <Link href="/">
+              <Link href="/About">
                 <li className="py-4 text-sm uppercase">About</li>
               </Link>
-              <Link href="/">
+              <Link href="/Skills">
                 <li className="py-4 text-sm uppercase">Skills</li>
               </Link>
-              <Link href="/">
+              <Link href="/Projects">
                 <li className="py-4 text-sm uppercase">Projects</li>
               </Link>
-              <Link href="/">
+              <Link href="/Contact">
                 <li className="py-4 text-sm uppercase">Contact</li>
               </Link>
             </ul>
@@ -104,10 +111,14 @@ const Navbar = () => {
                   <FaLinkedinIn />
                 </div>
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-500">
-                  <FaGithub />
+                  <Link href={"https://github.com/israranjum"}>
+                    <FaGithub />
+                  </Link>
                 </div>
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-500">
-                  <AiOutlineMail />
+                  <Link href={"mailto:suna6781@gmail.com"}>
+                    <AiOutlineMail />
+                  </Link>
                 </div>
                 <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-500">
                   <BsFillPersonLinesFill />
